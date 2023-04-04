@@ -172,6 +172,8 @@ function eMailSelectStatus ($activeAndAssociateOnly=true) {
 /******************************************/
 global $eMail;
 
+//eMail Status changed to array
+
     $_POST['Status'] = $eMail['Status'];
     return select_Status($activeAndAssociateOnly=true);
 }
@@ -282,15 +284,15 @@ function get_Special ($eMail, $type='Get') {
    $SS['RS-D21']           = 'TotalMPs BETWEEN 1 AND 500 AND Unit IN (500, 501, 503, 507, 522, 524, 529, 530, 550)';
    $SS['SU-D21']           = 'TotalMPs > 10 AND Unit IN              (500, 501, 503, 507, 522, 524, 529, 530, 550)';   
 /*
-                           •    500: South County (South Alameda Co)
-                           •    501: Livermore Valley
-                           •    503: Palo Alto
-                           •    507: Silicon Valley (SJ)
-                           •    522: Fresno
-                           •    524: Gilroy
-                           •    529: Modesto
-                           •    530: Monterey
-                           •    550: Santa Cruz
+                           ï¿½    500: South County (South Alameda Co)
+                           ï¿½    501: Livermore Valley
+                           ï¿½    503: Palo Alto
+                           ï¿½    507: Silicon Valley (SJ)
+                           ï¿½    522: Fresno
+                           ï¿½    524: Gilroy
+                           ï¿½    529: Modesto
+                           ï¿½    530: Monterey
+                           ï¿½    550: Santa Cruz
 /********* Other Selections *************/   
    $SS['NLM']              = '(TotalMPs > 10 AND (SUBSTRING(ACBL,1,1) BETWEEN "0" AND "9" OR SUBSTRING(ACBL,1,4) = "scbc"))';
 /********* End Selections *************/
